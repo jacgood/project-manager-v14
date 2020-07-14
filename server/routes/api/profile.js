@@ -1,6 +1,9 @@
 const express = require('express');
 const axios = require('axios');
-const config = require('config');
+const path = require('path');
+require('dotenv').config({
+  path: path.resolve(__dirname, '../../../bin/.env')
+});
 const router = express.Router();
 const auth = require('../../middleware/auth');
 const { check, validationResult } = require('express-validator');
@@ -321,7 +324,7 @@ router.get('/github/:username', async (req, res) => {
     );
     const headers = {
       'user-agent': 'node.js',
-      Authorization: `token ${config.get('githubToken')}`
+      Authorization: `token ${process.env.githubToken}`
     };
 
     const gitHubResponse = await axios.get(uri, { headers });

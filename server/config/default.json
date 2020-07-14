@@ -1,0 +1,5 @@
+{
+  "mongoURI": "mongodb+srv://pmdbadmin:wHX8staCzP5WCM5W@gis-dev-db-g7nls.mongodb.net/pmdb?retryWrites=true&w=majority",
+  "jwtSecret": "mysupersecretsecret",
+  "githubToken": "4e7d7f3db4370ab4c5c16e2c979c80e6f1aa4a08"
+}
